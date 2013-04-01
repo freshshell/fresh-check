@@ -104,5 +104,10 @@ if $0 == __FILE__
     status &= (result == true)
     output_result line, result
   end
+  if status
+    $stderr.puts "\e[1;32m\u2713\u2713\u2713 All good. \u2713\u2713\u2713\e[0m"
+  else
+    $stderr.puts "\e[1;31m\u2717\u2717\u2717 Errors were found. \u2717\u2717\u2717\e[0m"
+  end
   exit status
 end
