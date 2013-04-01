@@ -55,8 +55,8 @@ def with_fresh_sandbox
     }
     dummy_filters = %w[gpg]
 
-    FileUtils.mkdir_p paths.values_at('HOME', '_BIN', 'FRESH_LOCAL')
-    FileUtils.ln_s File.expand_path(File.dirname(__FILE__) + '/.fresh'), paths['FRESH_PATH']
+    FileUtils.mkdir_p paths.values_at('HOME', '_BIN', 'FRESH_PATH', 'FRESH_LOCAL')
+    FileUtils.ln_s File.expand_path(File.dirname(__FILE__) + '/.fresh/source'), "#{paths['FRESH_PATH']}/source"
 
     FileUtils.ln_s "#{paths['FRESH_PATH']}/source/freshshell/fresh/bin/fresh", "#{paths['_BIN']}/fresh"
     dummy_filters.each do |name|
