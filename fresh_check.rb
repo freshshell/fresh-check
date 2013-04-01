@@ -53,7 +53,7 @@ def with_fresh_sandbox
       'FRESH_PATH' => "#{sandbox_dir}/fresh",
       'FRESH_LOCAL' => "#{sandbox_dir}/dotfiles"
     }
-    dummy_filters = %w[gpg]
+    dummy_filters = %w[erb gpg]
 
     FileUtils.mkdir_p paths.values_at('HOME', '_BIN', 'FRESH_PATH', 'FRESH_LOCAL')
     FileUtils.ln_s File.expand_path(File.dirname(__FILE__) + '/.fresh/source'), "#{paths['FRESH_PATH']}/source"
