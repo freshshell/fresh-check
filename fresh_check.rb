@@ -97,9 +97,12 @@ def output_progress(line)
 end
 
 if $0 == __FILE__
+  status = true
   (readme_lines + directory_lines).each do |line|
     output_progress line
     result = check_line line
+    status &= (result == true)
     output_result line, result
   end
+  exit status
 end
