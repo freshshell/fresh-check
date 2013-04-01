@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/freshshell/api.git
-  revision: bf1276f1788708e11a1c211dbcdd9489d59ad9d5
+  revision: bd4683a6039322f0bec977816433641c446efe90
   specs:
     fresh_api (0.0.0)
 
