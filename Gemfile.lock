@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/freshshell/api.git
+  remote: git://github.com/freshshell/fresh-api.git
   revision: bd4683a6039322f0bec977816433641c446efe90
   specs:
     fresh_api (0.0.0)
